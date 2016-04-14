@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="401.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="10.0" layoutY="142.0" style="-fx-font-weight: bold;" text="Configuration Name">
+         <padding>
+            <Insets left="5.0" top="5.0" />
+         </padding>
+      </Label>
+      <TextField layoutX="15.0" layoutY="164.0" maxWidth="-Infinity" minWidth="-Infinity" promptText="Configuration Name">
+         <VBox.margin>
+            <Insets left="5.0" />
+         </VBox.margin>
+      </TextField>
+      <Label style="-fx-font-weight: bold;" text="Programable Gain Amplifier">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <padding>
+            <Insets left="5.0" top="5.0" />
+         </padding>
+      </Label>
+      <HBox spacing="20.0">
+         <children>
+            <RadioButton alignment="TOP_LEFT" mnemonicParsing="false" text="1x" textAlignment="CENTER">
+               <toggleGroup>
+                  <ToggleGroup fx:id="GAtg" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton alignment="TOP_LEFT" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="2x" toggleGroup="$GAtg" />
+            <RadioButton alignment="TOP_LEFT" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="4x" toggleGroup="$GAtg" />
+            <RadioButton alignment="TOP_LEFT" layoutX="41.0" layoutY="10.0" mnemonicParsing="false" text="8x" toggleGroup="$GAtg" />
+            <RadioButton alignment="TOP_LEFT" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="16x" toggleGroup="$GAtg" />
+            <RadioButton alignment="TOP_LEFT" layoutX="41.0" layoutY="10.0" mnemonicParsing="false" text="32x" toggleGroup="$GAtg" />
+            <RadioButton alignment="TOP_LEFT" layoutX="72.0" layoutY="10.0" mnemonicParsing="false" text="64x" toggleGroup="$GAtg" />
+         </children>
+         <padding>
+            <Insets left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+      <Label layoutX="10.0" layoutY="10.0" style="-fx-font-weight: bold;" text="Aquisition Bits">
+         <padding>
+            <Insets left="5.0" top="5.0" />
+         </padding>
+      </Label>
+      <HBox layoutX="10.0" layoutY="32.0" spacing="20.0">
+         <children>
+            <RadioButton fx:id="bit16" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#khz52select" text="16 bits" textAlignment="CENTER">
+               <toggleGroup>
+                  <ToggleGroup fx:id="GAtg1" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="bit24" alignment="TOP_LEFT" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#khz105select" text="24 bits" toggleGroup="$GAtg1" />
+         </children>
+         <padding>
+            <Insets left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+      <Label layoutX="10.0" layoutY="54.0" style="-fx-font-weight: bold;" text="Aquisition Frequency">
+         <padding>
+            <Insets left="5.0" top="5.0" />
+         </padding>
+      </Label>
+      <HBox layoutX="10.0" layoutY="76.0" spacing="20.0">
+         <children>
+            <RadioButton fx:id="khz52" alignment="TOP_LEFT" mnemonicParsing="false" text="52.734 kHz" textAlignment="CENTER">
+               <toggleGroup>
+                  <ToggleGroup fx:id="GAtg11" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="khz105" alignment="TOP_LEFT" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="105.469 kHz" toggleGroup="$GAtg11" />
+         </children>
+         <padding>
+            <Insets left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+      <Label layoutX="10.0" layoutY="98.0" style="-fx-font-weight: bold;" text="File length">
+         <padding>
+            <Insets left="5.0" top="5.0" />
+         </padding>
+      </Label>
+      <TextField maxWidth="-Infinity" minWidth="-Infinity" promptText="File length in seconds">
+         <VBox.margin>
+            <Insets left="5.0" />
+         </VBox.margin>
+      </TextField>
+      <Label layoutX="10.0" layoutY="145.0" style="-fx-font-weight: bold;" text="Aquisition mode">
+         <padding>
+            <Insets left="5.0" top="5.0" />
+         </padding>
+      </Label>
+      <HBox layoutX="10.0" layoutY="167.0" spacing="20.0">
+         <children>
+            <RadioButton alignment="TOP_LEFT" mnemonicParsing="false" onAction="#contTimes" text="Continous" textAlignment="CENTER">
+               <toggleGroup>
+                  <ToggleGroup fx:id="GAtg111" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton alignment="TOP_LEFT" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#schedTimes" text="Scheduled" toggleGroup="$GAtg111" />
+            <RadioButton alignment="TOP_LEFT" layoutX="15.0" layoutY="15.0" mnemonicParsing="false" onAction="#manTimes" text="Manual" textAlignment="CENTER" toggleGroup="$GAtg111" />
+         </children>
+         <padding>
+            <Insets left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <TextField fx:id="starttime" disable="true" />
+            <TextField fx:id="endtime" disable="true" />
+            <TextField fx:id="schedtim" disable="true" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

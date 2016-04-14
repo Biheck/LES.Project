@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane fx:id="pane" hgap="20.0" prefHeight="400.0" prefWidth="600.0" vgap="5.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <Button fx:id="profile" alignment="BOTTOM_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#profilePressed" text="Perfis" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="20.0" />
+         </padding>
+      </Button>
+      <Button fx:id="managedata" alignment="BOTTOM_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Consultar Dados" GridPane.columnIndex="2" GridPane.rowIndex="1">
+         <padding>
+            <Insets bottom="20.0" />
+         </padding>
+      </Button>
+      <Button fx:id="config" alignment="BOTTOM_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Configurar Hidrofone" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+         <padding>
+            <Insets bottom="20.0" />
+         </padding>
+      </Button>
+      <Button fx:id="watch" alignment="BOTTOM_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Configurar Relógio" GridPane.columnIndex="2" GridPane.rowIndex="2">
+         <padding>
+            <Insets bottom="20.0" />
+         </padding>
+      </Button>
+      <ImageView GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+         <image>
+            <Image url="@../../images/Gender%20Neutral%20User-50.png" />
+         </image>
+         <GridPane.margin>
+            <Insets top="5.0" />
+         </GridPane.margin>
+      </ImageView>
+      <ImageView GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+         <image>
+            <Image url="@../../images/Search%20Property-50.png" />
+         </image>
+         <GridPane.margin>
+            <Insets top="5.0" />
+         </GridPane.margin>
+      </ImageView>
+      <ImageView GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
+         <image>
+            <Image url="@../../images/Clock-50.png" />
+         </image>
+         <GridPane.margin>
+            <Insets top="5.0" />
+         </GridPane.margin>
+      </ImageView>
+      <ImageView GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
+         <image>
+            <Image url="@../../images/Settings-50.png" />
+         </image>
+         <GridPane.margin>
+            <Insets top="5.0" />
+         </GridPane.margin>
+      </ImageView>
+   </children>
+</GridPane>
